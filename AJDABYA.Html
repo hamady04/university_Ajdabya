@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جامعة أجدابيا</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5dc; /* خلفية بيج */
+            text-align: center;
+            color: #7c0a02; /* اللون الأحمر الداكن */
+        }
+        header {
+            background-color: #7c0a02; /* الأحمر الداكن */
+            color: white;
+            padding: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, font-size 0.3s ease;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 48px;
+            letter-spacing: 2px;
+        }
+        header p {
+            font-size: 20px;
+            font-weight: normal;
+        }
+        .main-image {
+            margin: 20px 0;
+        }
+        .main-image img {
+            width: 50%;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        .links {
+            margin: 30px 0;
+            padding: 20px;
+            text-align: left;
+        }
+        .links ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .links li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            background-color: #fffafa; /* الأبيض */
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+        .links li:hover {
+            background-color: #ffe4e1; /* تأثير عند التمرير */
+        }
+        .links img {
+            width: 60px;
+            height: 60px;
+            border-radius: 5px;
+            margin-right: 20px;
+            transition: transform 0.3s ease;
+        }
+        .links img:hover {
+            transform: scale(1.1);
+        }
+        .links a {
+            font-size: 20px;
+            color: #000000; /* الأسود */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .links a:hover {
+            color: #d32f2f; /* اللون الأحمر الفاتح عند التمرير */
+        }
+        footer {
+            margin-top: 40px;
+            padding: 15px;
+            background-color: #7c0a02; /* الأحمر الداكن */
+            color: white;
+        }
+        footer p {
+            margin: 0;
+            font-size: 16px;
+        }
+        footer p:last-child {
+            font-size: 14px;
+            color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>جامعة أجدابيا</h1>
+        <p>مرحباً بكم في الموقع الرسمي لجامعة أجدابيا</p>
+    </header>
+
+    <div class="main-image">
+        <img src="ajdabya.jpg" title="صورة جامعة أجدابيا" alt="صورة جامعة أجدابيا">
+    </div>
+
+    <div class="links">
+        <ul>
+            <li>
+                <img src="aq.jpg" title="صورة كلية الاقتصاد" alt="كلية الاقتصاد">
+                <a href="aq.html">كلية الاقتصاد</a>
+            </li>
+            <li>
+                <img src="engi.jpg" title="صورة كلية الهندسة" alt="كلية الهندسة">
+                <a href="eng.html">كلية الهندسة</a>
+            </li>
+            <li>
+                <img src="it.jpg" title="صورة كلية الحاسبات وتقنية المعلومات" alt="كلية الحاسبات وتقنية المعلومات">
+                <a href="itpage.html">كلية الحاسبات وتقنية المعلومات</a>
+            </li>
+            <li>
+                <img src="medical.jpg" title="صورة كلية الطب" alt="كلية الطب">
+                <a href="medical.html">كلية الطب</a>
+            </li>
+            <li>
+                <img src="sciene.jpg" title="صورة كلية العلوم" alt="كلية العلوم">
+                <a href="sciene.html">كلية العلوم</a>
+            </li>
+            <li>
+                <img src="law.jpg" title="صورة كلية الحقوق" alt="كلية الحقوق">
+                <a href="law.html">كلية الحقوق</a>
+            </li>
+        </ul>
+    </div>
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2024 - جامعة أجدابيا</p>
+        <p>إعداد: محمد عبدالباسط أحمد</p>
+    </footer>
+
+    <script>
+        // عرض رسالة ترحيب عند تحميل الصفحة
+        window.onload = function() {
+            alert("مرحباً بك في موقع جامعة أجدابيا!");
+        };
+
+        // إضافة دالة لتغيير لون الهيدر عند التمرير
+        window.onscroll = function() {
+            let header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = '#5a0a02'; // تغيير اللون عند التمرير
+                header.style.fontSize = '40px'; // تقليل حجم الخط عند التمرير
+            } else {
+                header.style.backgroundColor = '#7c0a02';
+                header.style.fontSize = '48px'; // استعادة الحجم الأصلي
+            }
+        };
+
+        // إضافة دالة لتغيير النص عند النقر على رابط
+        document.querySelectorAll('.links a').forEach(link => {
+            link.addEventListener('click', function(event) {
+                alert("أنت الآن تتصفح " + this.innerText);
+            });
+        });
+    </script>
+
+</body>
+</html>
